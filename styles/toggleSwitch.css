@@ -1,0 +1,46 @@
+@import url(./vars.css);
+
+.actionBtns {
+    background: var(--cor-branco);
+    margin: 1em 2em 24px 2em;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+}
+
+.actionBtn {
+    padding: 1em;
+    background: transparent;
+    border: none;
+    color: var(--cor-azul-escuro);
+    cursor: pointer;
+    outline: none;
+}
+
+.moveBtn {
+    position: absolute;
+    height: 90%;
+    margin: 2px;
+    border: none;
+    background: var(--cor-azul-escuro);
+    color: var(--cor-branco);
+    transform: translateX(0);
+    transition: all 0.2s ease-in-out;
+}
+
+.actionBtn,
+.moveBtn {
+    width: 50%;
+    font-size: 11pt;
+    font-weight: 600;
+    border-radius: 3px;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.rightBtn {
+    transform: translateX(97%);
+    transition: all 0.2s ease-in-out;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <link rel="stylesheet" href="./styles/reset.css">
+    <!-- CSS DO CABEÇALHO -->
+    <link rel="stylesheet" href="./styles/header.css">
+    <!-- CSS DO BTN TOGGLE -->
+    <link rel="stylesheet" href="./styles/toggleSwitch.css">
+    <!-- CSS DO FORMULÁRIO DE BUSCA -->
+    <link rel="stylesheet" href="./styles/formFind.css">
+    <!-- CSS DA AREA DE REPOSITÓRIOS -->
+    <link rel="stylesheet" href="./styles/repo.css">
+
+    <title>Find Repo</title>
+</head>
+
+<body>
+    <!-- --------------- CABEÇALHO -->
+    <div class="container">
+        <header class="header">
+            <div class="top-profile">
+                <div class="profile">
+                    <img id="profileImg" src="./assets/profile-default.jpg" alt="imagem de perfil do github">
+                    <a class="btn-blog" id="btnPort" target="_blank">BLOG</a>
+                </div>
+                <div class="infos">
+                    <h3 class="profile-name" id="username">Nome de usuário</h3>
+                    <p>Repositórios públicos: <span id="nRepo"></span></p>
+                    <p>Seguindo: <span id="nFollowing"></span></p>
+                    <p>Seguidores: <span id="nFollowers"></span></p>
+                </div>
+            </div>
+            <p class="profile-areaBio"><span class="profile-bio" id="bio">
+                </span></p>
+        </header>
+        <!-- --------------- BOTÃO DE DESLIZE (Toggle Switch) -->
+        <div class="actionBtns">
+            <button id="btnSearch" class="actionBtn">Pesquisar</button>
+            <button id="btnRepo" class="actionBtn">Repositórios</button>
+            <button class="moveBtn">Pesquisar</button>
+        </div>
+        <div class="content">
+            <!-- --------------- AREA DE FORMULÁRIO DE BUSCA -->
+            <section class="area-form">
+                <form class="form-search" id="formSearch">
+                    <div class="form-group">
+                        <input type="text" id="githubUser" required>
+                        <label for="githubUser">Nick do Github</label>
+                    </div>
+                    <button class="btn-submit" type="submit" id="btnSubmit">Buscar</button>
+                </form>
+            </section>
+            <!-- --------------- AREA DE EXIBIÇÃO DOS REPOSITÓRIOS -->
+            <section>
+                <ul class="area-repo" id="listRepo">
+                    <li class="card" id="repoCard">
+                        <img src="./assets/capa_default.jpg" id="repoCapa" alt="capa padrão de projeto">
+                        <p class="desc" id="repoDesc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, minus
+                            rem officiis quisquam totam error porro accusamus sit eaque dignissimos.</p>
+                        <div class="card-buttons">
+                            <a class="btn-repo" id="btnRepo" target="_blank">Ver no github</a>
+                            <a class="btn-visit" id="btnVisit" target="_blank">Acessar aplicação</a>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <script src="./scripts/toggleSwitch.js"></script>
+    <script src="./scripts/findUser.js"></script>
+</body>
+
+</html>

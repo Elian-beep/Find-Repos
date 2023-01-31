@@ -1,0 +1,47 @@
+.area-repo{
+    display: none;
+    margin-top: 2em;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+}
+.area-repo.show{
+    display: flex;
+}
+
+/* ---------------- CARD DE PROJETO */
+
+.card{
+    width: 150px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    color: var(--cor-azul-escuro);
+}
+
+.card img{
+    width: 150px;
+    height: 110px;
+    border-radius: 4px;
+}
+
+.desc{
+    font-size: 12pt;
+    font-weight: 400;
+}
+
+.card-buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.btn-repo, .btn-visit{
+    align-self: center;
+    width: 95%;
+    text-align: center;
+    padding: 6px;
+    border: .5px solid var(--cor-azul-escuro);
+}
