@@ -29,6 +29,10 @@
 .desc{
     font-size: 12pt;
     font-weight: 400;
+    padding-bottom: 8px;
+    height: 150px;
+    max-height: 150px;
+    overflow-y: scroll;
 }
 
 .card-buttons{
