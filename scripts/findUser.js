@@ -51,19 +51,22 @@ function getGithubAPI(nameUser) {
                 let repoFound = await res.json();
 
                 repoFound.map(item => {
-                    let liCard = document.createElement('li');
-                    liCard.classList.add('card');
-
-                    liCard.innerHTML = `
-                        <img src="./assets/capa_default.jpg" id="repoCapa" alt="capa padrão de projeto">
-                        <p class="desc" id="repoDesc">${item.description}</p>
-                        <div class="card-buttons">
-                            <a class="btn-repo" id="btnRepo" target="_blank">Ver no github</a>
-                            <a class="btn-visit" id="btnVisit" target="_blank">Acessar aplicação</a>
-                        </div>
-                    `;
-
-                    listRepo.appendChild(liCard);
+                    if (item.description != null) {
+                        let liCard = document.createElement('li');
+                        liCard.classList.add('card');
+    
+                        liCard.innerHTML = `
+                            <h3 class="repo-name">${item.name}</h3>
+                            <img src="./assets/capa_default.jpg" id="repoCapa" alt="capa padrão de projeto">
+                            <p class="desc" id="repoDesc">${item.description}</p>
+                            <div class="card-buttons">
+                                <a href="${item.html_url}" class="btn-repo" id="btnRepo" target="_blank">Ver no github</a>
+                                <a href="${item.homepage}" class="btn-visit" id="btnVisit" target="_blank">Acessar aplicação</a>
+                            </div>
+                        `;
+    
+                        listRepo.appendChild(liCard);
+                    }
                 });
             }
         })
