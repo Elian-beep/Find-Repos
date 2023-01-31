@@ -63,3 +63,28 @@
     text-align: justify;
     font-size: 13pt;
 }
+
+/* -------------------------------- TABLET -------------------------------- */
+@media screen and (min-width: 481px) {
+    .header {
+        gap: 1.5rem;
+    }
+    .profile img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .profile-name {
+        font-size: 18pt;
+    }
+
+    .infos {
+        gap: .8rem;
+        font-size: 13pt;
+    }
+
+    .profile-areaBio {
+        height: 130px;
+        max-height: 130px;
+    }
+}

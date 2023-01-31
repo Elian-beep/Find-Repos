@@ -63,3 +63,27 @@
     font-weight: 400;
     outline: none;
 }
+
+/* -------------------------------- TABLET -------------------------------- */
+@media screen and (min-width: 481px) {
+    .area-form {
+        margin-top: 2rem;
+    }
+
+    .form-search {
+        justify-content: center;
+        gap: 3em;
+        background: var(--cor-branco);
+        box-shadow: 0px 0px 10px 1px rgba(33, 49, 64, 0.25);
+        padding: 16px;
+    }
+
+    .form-group {
+        background: var(--cor-branco);
+    }
+
+    .form-group input {
+        font-size: 14pt;
+        background: var(--cor-branco);
+    }
+}

@@ -44,3 +44,16 @@
     transform: translateX(97%);
     transition: all 0.2s ease-in-out;
 }
+
+/* -------------------------------- TABLET -------------------------------- */
+@media screen and (min-width: 481px) {
+    .actionBtns {
+        max-width: 350px;
+        margin: 2rem auto 24px auto;
+    }
+
+    .actionBtn,
+    .moveBtn {
+        font-size: 12pt;
+    }
+}

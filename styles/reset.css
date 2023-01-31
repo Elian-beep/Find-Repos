@@ -52,3 +52,10 @@ table {
 .container{
 	padding: 24px;
 }
+
+/* -------------------------------- TABLET -------------------------------- */
+@media screen and (min-width: 481px) {
+	.container{
+		padding: 24px 32px;
+	}
+}

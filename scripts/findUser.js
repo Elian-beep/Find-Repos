@@ -77,5 +77,6 @@ function getGithubAPI(nameUser) {
 }
 
 btnSubmit.addEventListener("click", () => {
+    listRepo.innerHTML = "";
     getGithubAPI(inptUser.value);
 });
