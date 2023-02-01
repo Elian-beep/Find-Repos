@@ -67,6 +67,17 @@
     padding: 16px;
 }
 
+.profile-areaBio::-webkit-scrollbar{
+	width: 10px;
+	border-radius: 2px 8px 8px 2px;
+	background: var(--cor-cinza-palido);
+}
+
+.profile-areaBio::-webkit-scrollbar-thumb{
+	border-radius: 2px 8px 8px 2px;
+	background: var(--cor-azul-escuro);
+}
+
 .profile-bio {
     text-align: justify;
     font-size: 13pt;

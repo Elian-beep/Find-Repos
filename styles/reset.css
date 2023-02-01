@@ -49,6 +49,17 @@ table {
 	background: var(--cor-branco-palido);
 }
 
+html::-webkit-scrollbar{
+	width: 15px;
+	border-radius: 2px;
+	background: var(--cor-cinza-palido);
+}
+
+html::-webkit-scrollbar-thumb{
+	border-radius: 2px;
+	background: var(--cor-azul-escuro);
+}
+
 .container{
 	padding: 24px;
 }

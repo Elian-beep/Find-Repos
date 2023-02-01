@@ -50,6 +50,17 @@
     overflow-y: scroll;
 }
 
+.desc::-webkit-scrollbar{
+    width: 5px;
+    border-radius: 10px;
+    background: var(--cor-cinza-palido);
+}
+
+.desc::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background: var(--cor-azul-escuro);
+}
+
 .card-buttons {
     display: flex;
     flex-direction: column;
