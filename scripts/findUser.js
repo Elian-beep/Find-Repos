@@ -38,11 +38,7 @@ function getGithubAPI(nameUser) {
         .then(async res => {
             if (!res.ok) {
                 throw new Error(res.status);
-            }
-            if(res.status == 404){
-                activeAlert("Usuário não encontrado");
-                console.log("usuario nao find");
-            }else if (res.status == 200) {
+            }if (res.status == 200) {
                 let userFound = await res.json();
 
                 nRepo.innerHTML = userFound.public_repos;
@@ -56,7 +52,7 @@ function getGithubAPI(nameUser) {
         })
         .catch(err => {
             console.log(err);
-            // activeAlert("Usuário não encontrado");
+            activeAlert("Usuário não encontrado");
             //CRIAR MENSAGEM DE USUARIO NAO ENCONTRADO
         });
 
