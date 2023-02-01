@@ -17,6 +17,11 @@
     color: var(--cor-azul-escuro);
     cursor: pointer;
     outline: none;
+    transition: color .2s ease-in;
+}
+
+.actionBtn:hover{
+    color: var(--cor-cinza-palido);
 }
 
 .moveBtn {

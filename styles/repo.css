@@ -26,9 +26,12 @@
 }
 
 .repo-name {
-    font-size: 13pt;
+    font-size: 13pt;    
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     font-weight: 600;
-    height: 30px;
     color: var(--cor-azul-escuro);
 }
 

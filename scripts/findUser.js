@@ -14,9 +14,23 @@ const username = document.getElementById('username');
 // LISTA DE REPOSITÓRIOS
 const listRepo = document.getElementById('listRepo');
 
+// ALERTA
+const divMessage = document.querySelector(".alert");
+
 formSearch, addEventListener("submit", event => {
     event.preventDefault();
 });
+
+function activeAlert(msg){
+    const message = document.createElement("div");
+    message.classList.add("message");
+    message.innerHTML = msg;
+    divMessage.appendChild(message);
+
+    setTimeout(() => {
+        message.style.display = "none";
+    }, 3000);
+}
 
 function getGithubAPI(nameUser) {
     // INSERIR DADOS INICIAIS AO CABEÇALHO
@@ -25,7 +39,10 @@ function getGithubAPI(nameUser) {
             if (!res.ok) {
                 throw new Error(res.status);
             }
-            if (res.status == 200) {
+            if(res.status == 404){
+                activeAlert("Usuário não encontrado");
+                console.log("usuario nao find");
+            }else if (res.status == 200) {
                 let userFound = await res.json();
 
                 nRepo.innerHTML = userFound.public_repos;
@@ -38,7 +55,8 @@ function getGithubAPI(nameUser) {
             }
         })
         .catch(err => {
-            console.log(err, "usuario nao encontrado")
+            console.log(err);
+            // activeAlert("Usuário não encontrado");
             //CRIAR MENSAGEM DE USUARIO NAO ENCONTRADO
         });
 
@@ -71,7 +89,7 @@ function getGithubAPI(nameUser) {
             }
         })
         .catch(err => {
-            console.log(err, "repositórios não encontrados")
+            console.log(err)
             //CRIAR MENSAGEM DE USUARIO NAO ENCONTRADO
         });
 }
