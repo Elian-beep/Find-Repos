@@ -86,4 +86,20 @@
         font-size: 14pt;
         background: var(--cor-branco);
     }
+
+    .form-group label {
+        background: var(--cor-branco);
+    }
+}
+
+/* -------------------------------- NOTEBOOK -------------------------------- */
+@media screen and (min-width: 769px) {
+    .form-search {
+        width: 600px;
+        margin: 0 auto;
+    }
+    .form-group input {
+        font-size: 13pt;
+        background: var(--cor-branco);
+    }
 }

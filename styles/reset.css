@@ -59,3 +59,10 @@ table {
 		padding: 24px 32px;
 	}
 }
+
+/* -------------------------------- NOTEBOOK -------------------------------- */
+@media screen and (min-width: 769px) {
+	.container{
+		padding: 32px 128px;
+	}
+}

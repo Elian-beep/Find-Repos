@@ -41,7 +41,7 @@
     font-weight: 400;
 }
 
-.btn-blog{
+.btn-blog {
     width: 50%;
     border: .5px solid var(--cor-azul-escuro);
     color: var(--cor-azul-escuro);
@@ -69,6 +69,7 @@
     .header {
         gap: 1.5rem;
     }
+
     .profile img {
         width: 140px;
         height: 140px;
@@ -86,5 +87,27 @@
     .profile-areaBio {
         height: 130px;
         max-height: 130px;
+    }
+}
+
+/* -------------------------------- NOTEBOOK -------------------------------- */
+@media screen and (min-width: 769px) {
+    .header {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .profile {
+        gap: 1.2rem;
+    }
+
+    .profile-areaBio {
+        height: 120px;
+        max-height: 120px;
+        width: 400px;
+        max-width: 400px;
     }
 }

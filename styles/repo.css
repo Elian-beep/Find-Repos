@@ -2,7 +2,7 @@
     display: none;
     margin-top: 2em;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     gap: 12px;
 }
 
@@ -13,7 +13,7 @@
 /* ---------------- CARD DE PROJETO */
 
 .card {
-    width: 150px;
+    width: 200px;
     padding: 8px;
     display: flex;
     flex-direction: column;
@@ -30,7 +30,7 @@
 }
 
 .card img {
-    width: 150px;
+    width: 200px;
     height: 110px;
     border-radius: 4px;
 }
@@ -39,7 +39,7 @@
     font-size: 12pt;
     font-weight: 400;
     padding-bottom: 8px;
-    height: 70px;
+    height: 150px;
     max-height: 150px;
     overflow-y: scroll;
 }
@@ -64,6 +64,10 @@
 
 /* -------------------------------- TABLET -------------------------------- */
 @media screen and (min-width: 481px) {
+    .area-repo {
+        justify-content: space-between;
+    }
+
     .card {
         width: 130px;
         margin-bottom: 1em;
@@ -72,6 +76,25 @@
     .card img {
         width: 130px;
         height: 90px;
-        border-radius: 4px;
+    }
+}
+
+/* -------------------------------- NOTEBOOK -------------------------------- */
+@media screen and (min-width: 769px) {
+    .card {
+        width: 170px;
+        margin-bottom: 1em;
+        gap: 1em;
+    }
+
+    .card img {
+        width: 170px;
+        height: 90px;
+    }
+
+    .desc {
+        font-size: 12pt;
+        height: 140px;
+        max-height: 140px;
     }
 }

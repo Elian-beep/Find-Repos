@@ -57,3 +57,10 @@
         font-size: 12pt;
     }
 }
+
+/* -------------------------------- NOTEBOOK -------------------------------- */
+@media screen and (min-width: 769px) {
+    .actionBtns{
+        margin-bottom: 4rem;
+    }
+}
